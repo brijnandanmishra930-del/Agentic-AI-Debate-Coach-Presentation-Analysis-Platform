@@ -17,11 +17,12 @@ def get_user_notifications(user_id: int = 1, db: Session = Depends(get_db)):
     ).all()
     
     for idx, sess in enumerate(scheduled_sessions):
+        scheduled_time_str = sess.scheduled_at.strftime('%Y-%m-%d %H:%M') if sess.scheduled_at else "Not Scheduled"
         notifications_list.append({
             "id": 100 + idx,
             "category": "Session Reminder",
             "title": "Upcoming Scheduled Practice",
-            "message": f"Your debate practice on '{sess.topic[:40]}...' is scheduled for {sess.scheduled_at.strftime('%Y-%m-%d %H:%M')}.",
+            "message": f"Your debate practice on '{sess.topic[:40]}...' is scheduled for {scheduled_time_str}.",
             "timestamp": "Active Reminder",
             "read": False
         })
