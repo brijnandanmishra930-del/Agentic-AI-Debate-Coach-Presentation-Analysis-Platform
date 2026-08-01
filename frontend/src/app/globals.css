@@ -103,7 +103,7 @@ a {
   font-size: 0.85rem;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
-  border-radius: 2px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.2s ease;
   display: inline-flex;
@@ -153,7 +153,7 @@ a {
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.35rem 0.85rem;
-  border-radius: 20px;
+  border-radius: 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1.5rem;
@@ -162,7 +162,7 @@ a {
 .badge-dot {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: 0;
   background-color: var(--accent-red);
 }
 
@@ -231,7 +231,7 @@ a {
 .terminal-window {
   background: var(--dark-bg);
   border: 1px solid var(--dark-border);
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   position: relative;
@@ -254,7 +254,7 @@ a {
 .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 0;
 }
 .dot-red { background: #ff5f56; }
 .dot-yellow { background: #ffbd2e; }
