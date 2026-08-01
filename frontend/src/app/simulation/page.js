@@ -83,7 +83,9 @@ export default function SimulationPage() {
   };
 
   return (
-    <div className="section-container" style={{ paddingTop: '2rem' }}>
+    <div className="watermark-container">
+      <div className="watermark-text" style={{ bottom: '2rem', right: '2rem', left: 'auto', opacity: 0.05 }}>RHETORIC</div>
+      <div className="section-container" style={{ paddingTop: '2rem', position: 'relative', zIndex: 1 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
           <div className="badge-red-pill">LIVE SIMULATION ENGINE</div>
@@ -217,6 +219,7 @@ export default function SimulationPage() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
