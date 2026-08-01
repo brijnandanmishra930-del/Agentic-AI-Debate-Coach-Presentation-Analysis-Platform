@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-section">
         {/* Background Watermark Text */}
-        <div className="watermark-text" style={{ bottom: '0px', left: '-2rem', zIndex: 0 }}>RHETORIC</div>
+        <div className="watermark-text" style={{ bottom: '0px', left: '-2rem', zIndex: -1 }}>RHETORIC</div>
 
         <div>
           <div className="badge-red-pill">

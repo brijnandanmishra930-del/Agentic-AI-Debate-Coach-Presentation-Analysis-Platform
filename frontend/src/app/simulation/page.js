@@ -84,7 +84,7 @@ export default function SimulationPage() {
 
   return (
     <div className="watermark-container">
-      <div className="watermark-text" style={{ bottom: '2rem', right: '2rem', left: 'auto', opacity: 0.05 }}>RHETORIC</div>
+      <div className="watermark-text" style={{ bottom: '2rem', right: '2rem', left: 'auto', opacity: 0.05, zIndex: -1 }}>RHETORIC</div>
       <div className="section-container" style={{ paddingTop: '2rem', position: 'relative', zIndex: 1 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
         <div>
