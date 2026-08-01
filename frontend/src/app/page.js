@@ -8,6 +8,9 @@ export default function Home() {
 
   return (
     <div className="watermark-container">
+      {/* Background Watermark Text */}
+      <div className="watermark-text" style={{ bottom: '1rem', left: '-2rem', zIndex: 0 }}>RHETORIC</div>
+
       {/* Hero Section */}
       <section className="hero-section">
         <div>
