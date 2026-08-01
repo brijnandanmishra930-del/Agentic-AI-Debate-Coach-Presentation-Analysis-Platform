@@ -1,6 +1,29 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+function TypewriterText({ text, speed = 15 }) {
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    setDisplayedText("");
+    const timer = setInterval(() => {
+      setDisplayedText((prev) => {
+        const nextChar = text.charAt(index);
+        index++;
+        if (index >= text.length) {
+          clearInterval(timer);
+        }
+        return prev + nextChar;
+      });
+    }, speed);
+
+    return () => clearInterval(timer);
+  }, [text, speed]);
+
+  return <span>{displayedText}</span>;
+}
 
 export default function SimulationPage() {
   const [topic, setTopic] = useState("Autonomous AI Systems should be held legally liable for unintended damages.");
@@ -145,7 +168,11 @@ export default function SimulationPage() {
                 </div>
 
                 <div style={{ paddingLeft: '1.5rem', color: t.type === 'system' ? '#888' : '#e0e0e0' }}>
-                  {t.text}
+                  {t.type === 'opponent' && idx === transcript.length - 1 ? (
+                    <TypewriterText text={t.text} />
+                  ) : (
+                    t.text
+                  )}
                 </div>
 
                 {t.fallacies && t.fallacies.length > 0 && (
